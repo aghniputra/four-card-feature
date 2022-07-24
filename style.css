@@ -6,6 +6,8 @@ body {
     align-content: center;
     /* display: grid; */
     height: 100vh;
+    padding: 80px;
+    margin:0px;
 }
 
 h3 {
@@ -35,23 +37,27 @@ h5 {
     font-weight: 400;
     text-align: center;
     color:hsl(229, 6%, 66%);
-    margin: 0rem 19.3rem 0rem 19.3px;
+}
+
+.h5 {
+    max-width: 45%;
+    margin: auto;
 }
 
 .container {
     display: grid;
-    margin:0px;
-    padding: 5.3rem 11rem 5.3rem 11rem;
-    grid-template-columns: repeat(3, 350px);
+    margin:auto;
+    max-width: 74rem;
+    /* padding: 0rem 11rem 5.3rem 11rem; */
+    grid-template-columns: repeat(3, 33.33%);
     grid-template-rows: 202px 530px;
     grid-gap: 2rem;
-    grid-template-areas: "header header header"
-                         "left middle right";
+    grid-template-areas: "left middle right";
 }
 
-.header {
+/* .header {
     grid-area: header;
-   }
+   } */
 
 .left, .right {
     padding: 180px 0px 140px 0px;
