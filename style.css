@@ -4,7 +4,6 @@ body {
     background-color: hsl(0, 0%, 98%);
     justify-content: center;
     align-content: center;
-    /* display: grid; */
     height: 100vh;
     padding: 80px;
     margin:0px;
@@ -16,8 +15,8 @@ h3 {
     font-weight: 200;
     text-align: center;
     color:hsl(234, 12%, 34%);
-    margin-bottom:2rem;
-    line-height: 80%;
+    margin-bottom:1.8rem;
+    line-height: 100%;
 }
 
 h2 {
@@ -27,8 +26,8 @@ h2 {
     text-align: center;
     color:hsl(234, 12%, 34%);
     margin-top: 0px;
-    margin-bottom: 2.67rem;
-    line-height: 80%;
+    margin-bottom: 2.5rem;
+    line-height: 100%;
 }
 
 h5 {
@@ -40,7 +39,7 @@ h5 {
 }
 
 .h5 {
-    max-width: 45%;
+    max-width: 32%;
     margin: auto;
 }
 
@@ -48,9 +47,9 @@ h5 {
     display: grid;
     margin:auto;
     max-width: 74rem;
-    /* padding: 0rem 11rem 5.3rem 11rem; */
-    grid-template-columns: repeat(3, 33.33%);
-    grid-template-rows: 202px 530px;
+    /* padding: 0rem 11rem 0rem 11rem; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     grid-gap: 2rem;
     grid-template-areas: "left middle right";
 }
@@ -69,45 +68,65 @@ h5 {
 
 .card {
     background-color: white;
-    max-width: 350px;
-    height: 246px;
+    max-width: 373.3px;
+    min-height: 246px;
     padding: 34px;
     box-sizing: border-box;
     position: relative;
     top: 4px;
     border-radius: 0px 0px 8px 8px;
+    border-top: 0.25rem;
+    border-top-color: aqua;
+    margin: 0rem;
 }
 
 .card--cyan {
-    background-color: hsl(180, 62%, 55%);
+    /* background-color: hsl(180, 62%, 55%);
     width: 350px;
     height: 250px; 
     position: absolute;
     border-radius: 8px;
+    display: flex; */
+    border-top: 0.25rem solid hsl(180, 62%, 55%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 373.3px;
 }
 
 .card--red {
-    background-color: hsl(0, 78%, 62%);
+    /* background-color: hsl(0, 78%, 62%);
     width: 350px;
     height: 250px; 
     position: absolute;
-    border-radius: 8px;
+    border-radius: 8px; */
+    border-top: 0.25rem solid hsl(0, 78%, 62%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 373.3px;
 }
 
 .card--yellow {
-    background-color: hsl(34, 97%, 64%);
+    /* background-color: hsl(34, 97%, 64%);
     width: 350px;
     height: 250px; 
     position: absolute;
-    border-radius: 8px;
+    border-radius: 8px; */
+    border-top: 0.25rem solid hsl(34, 97%, 64%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 373.3px;
 }
 
 .card--blue {
-    background-color: hsl(212, 86%, 64%);
+    /* background-color: hsl(212, 86%, 64%);
     width: 350px;
     height: 250px; 
     position: absolute;
-    border-radius: 8px;
+    border-radius: 8px; */
+    border-top: 0.25rem solid hsl(212, 86%, 64%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 373.3px;
 }
 
 .card__title {
@@ -135,6 +154,18 @@ h5 {
     bottom: 34px;
 }
 
+@media (max-width: 800px) {
+   
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:"left"
+                            "middle"
+                            "right";
+        margin: 71px 31px 0px 31px;
+    }
+}
 
 .attribution { 
     font-size: 11px; 
